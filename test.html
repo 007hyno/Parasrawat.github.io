@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+<body>
+    <?php
+$con = mysql_connect("localhost","root","");
+if (!$con)
+  {
+  die('Could not connect: ' . mysql_error());
+  }
+mysql_select_db("CusotmerDB", $con);
+$result = mysql_query("SELECT * FROM customer_table");
+echo "<table border='1'>
+<tr>
+    <!-- c_no, c_name, item_purchased and mob_no  -->
+<th>c_no</th>
+<th>c_name</th>
+<th>item_purchased</th>
+<th>mob_no</th>
+</tr>";
+while($row = mysql_fetch_array($result))
+  {
+  echo "<tr>";
+  echo "<td>" . $row['c_no'] . "</td>";
+  echo "<td>" . $row['c_name'] . "</td>";
+  echo "<td>" . $row['item_purchased'] . "</td>";
+  echo "<td>" . $row['mob_no'] . "</td>";
+  echo "</tr>";
+  }
+echo "</table>";
+mysql_close($con);
+?>
+</body>
+
+</html>
