@@ -5,7 +5,7 @@ $primary-text:#ffffff;
 $primary-text-light: #000000;
 $text-highlight:#a41cf3;
 $primary-bg:#0d0d0d;
-$secondary-bg:#1a1a1a;
+$secondary-bg:#0d0013;
 $primary-bg-light:#ffffff;
 @mixin jcenter($dir) {
     display: flex;
@@ -95,8 +95,10 @@ nav{
         font-size: 16px;
         color: $primary-text;
         text-decoration: none;
+        border-color: #0d0013;
         &:hover{
-            border-bottom: 2px solid $primary-text;
+            color: #b18dc2;
+            border-bottom: 2px solid #a48daf;
         }  
     }
 }
@@ -108,12 +110,17 @@ button{
     filter: invert(1);
 }
 main{
+    // box-shadow: 0px 0px 9px #8400ff;
+    box-shadow: 3px 3px 2px #8400ff;
     border-radius: 5px;
     margin: 10px 10px;
-    width: 550px;
+    width: auto;
+    max-width: 550px;
     padding: 60px 50px;
     // @include jcenter(column);
-    background-color: $primary-bg;
+    // background-color: $primary-bg;
+    background-color: #b722f1;
+background-image: linear-gradient(135deg, #0d0013 0%, #0b0014 100%);
 }
 p{
     color:#ffffff;
@@ -123,8 +130,40 @@ footer{
         a{
             img{
                 margin: 5px 10px ;
-                
+                &:hover{
+                    background-color:#8a4a4a3a;
+                }
             }
         }
+    }
+}
+
+@media screen and (max-width: 651px) {
+    main{
+        // border: 1px solid #442879;
+        box-shadow: 2px 2px 2px #8400ff;
+        border-radius: 5px;
+        margin: 20px 1px;
+        width: auto;
+        padding: 20px 15px;
+    }
+    .p2{
+        font-size: 27px;
+    }
+    #username{
+        font-size: 34px;
+        height: 40px;
+        text-decoration: underline;
+        text-transform: capitalize;
+        border-bottom: #e4d7d7;
+    }
+    #myname{
+        display: none;
+    }
+    nav{
+        display: none;
+    }
+    body{
+        // padding-top: 10px;
     }
 }
