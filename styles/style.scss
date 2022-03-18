@@ -140,7 +140,7 @@ footer{
 
 @media screen and (max-width: 651px) {
     main{
-        // border: 1px solid #442879;
+        border: 1px solid #442879;
         box-shadow: 2px 2px 2px #8400ff;
         border-radius: 5px;
         margin: 20px 1px;
@@ -163,7 +163,5 @@ footer{
     nav{
         display: none;
     }
-    body{
-        // padding-top: 10px;
-    }
+
 }
