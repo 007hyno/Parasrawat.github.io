@@ -28,6 +28,18 @@
 .invert {
   filter: invert(1);
 }
+.img_round{
+  border-radius: 3px;
+}
+.text_highlighted_round{
+  padding: 0px 3px;
+  border-radius: 3px;
+}
+.title_backgound_color{
+  background-color: #120824;
+  padding: 0px 15px;
+  border-radius: 4px;
+}
 
 html {
   -webkit-animation: scroll 30s linear infinite alternate;
@@ -54,6 +66,7 @@ body {
   font-size: 2rem;
   font-family: "Bebas Neue", cursive;
   letter-spacing: 1px;
+  text-transform: none;
 }
 
 #myname {
