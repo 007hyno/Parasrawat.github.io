@@ -8,11 +8,14 @@
     /* --accent:#ffbe18; */
     --accent:#e0a82e;
     --gray:#3333331a;
+    --highlight:#cfcfcf;
     --redBackgroundColor:#ffebf2;
     --dashColor:#ff1791;
     --white:#f9fafb;
     --textPrimary:#333333;
     --textSecondary:#5a5a5a;
+    --transition-duration: 0.2s; 
+
     
 }
 div{
@@ -28,16 +31,37 @@ body{
 
  
  a.cardView {
-    background-color: white !important;
+    background-color: white ;
     border-radius: 1rem;
+    transition: transform var(--transition-duration) ease-in-out;
 
   }
+ 
+  a.cardView:hover{
+    background-color: var(--highlight) ;
+    border: 1px solid var(--gray);
+    /* transform: rotate(1deg); */
+    transform-origin: center;
+  }
+  a.cardView:hover .cardIcon {
+    transform: rotate(14deg); /* This will counteract the parent's rotation */
+    transform-origin: center;
+  }
+  .cardIcon{
+    transform-origin: center;
+
+    transition: transform var(--transition-duration) ease-in-out;
+  }
+
+
+ 
   .socials{
     width: 50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-top: 0.75rem;
+    
   }
 
   .socialIcons{
@@ -45,9 +69,17 @@ body{
     border-radius: 1rem;
     background-color: var(--white);
     margin: 0px 5px ;
+    transition: transform var(--transition-duration) ease-in-out;
+
+  }
+  .socialIcons:hover img{
+    /* width: 29px; */
+        transform: rotate(10deg);
+
   }
   .socialIcons img{
     width: 25px;
+
   }
   .profileDesc h2{
     display: flex;
@@ -56,8 +88,6 @@ body{
   .cardTop{
     justify-content: space-between;  
     align-items: center;
-
-
   }
  
   .profileDesc h2 span img{
