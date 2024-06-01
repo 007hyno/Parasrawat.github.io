@@ -8,7 +8,7 @@
     /* --accent:#ffbe18; */
     --accent:#e0a82e;
     --gray:#3333331a;
-    --highlight:#cfcfcf;
+    --highlight:#e4e4e0;
     --redBackgroundColor:#ffebf2;
     --dashColor:#ff1791;
     --white:#f9fafb;
@@ -98,6 +98,12 @@ body{
   .cardTopleft{
     display: flex;
     align-items: center;
+}
+.cardTopright {
+    border: 1px solid #dedede;
+    border-radius: 20px;
+    padding: 2px 3px;
+    box-shadow: 2px 1px #cdcdcd;
 }
  .type{
     display: flex;
